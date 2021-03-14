@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<head>
+<title>Post</title>
+</head>
+<body>
+{{ $post }}
+
+</body>
+</html>

@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
 
 use App\Models\Post;
+use App\Http\Controllers\BlogController;
+
 
 
 
@@ -30,13 +32,17 @@ Route::get('post/create', function () {
         'body'=>'i thought i wouldn\"t finish the project,but i did',
     ]);
 });
-Route::get('post', function () {
-    $post=Post::find(1);
-    return $post;
+Route::get('post',[BlogController::class, 'index']);
+
+
+Route::get('post/add',function(){
+    return view('blog.create');
 });
 
+Route::post('post/add',[BlogController:: class,'store' ])->name('add-post');
 
 
+ 
 
 
 
