@@ -5,5 +5,6 @@
 <body>
 {{ $post }}
 
+
 </body>
 </html>
